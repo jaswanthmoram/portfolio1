@@ -71,3 +71,32 @@ $(document).ready(function(){
         }
     });
 });
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Collect form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    // You can perform validation here if needed
+
+    // Simulate sending data to the server
+    const formData = {
+        name: name,
+        email: email,
+        subject: subject,
+        message: message
+    };
+
+    console.log('Form data:', formData); // For demonstration
+
+    // Display a success message to the user
+    const responseMessage = document.getElementById('responseMessage');
+    responseMessage.innerText = 'Your message has been sent successfully!';
+    responseMessage.style.color = 'green';
+
+    // Optionally, clear the form fields after submission
+    document.getElementById('contactForm').reset();
+});
