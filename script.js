@@ -93,7 +93,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         message: message
     };
 
-    console.log('Form data:', formData); // For demonstration
 
     // Display a success message to the user
     const responseMessage = document.getElementById('responseMessage');
